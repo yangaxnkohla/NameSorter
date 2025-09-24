@@ -30,4 +30,4 @@ jobs:
         run: dotnet test NameSorter.Tests/NameSorter.Tests.csproj
 
       - name: Run console application
-        run: dotnet run --project NameSorter.App/NameSorter.App.csproj
+        run: dotnet run --project NameSorter.App/NameSorter.App.csproj NameSorter.App/unsorted-names-list.txt
