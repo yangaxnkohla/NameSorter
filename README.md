@@ -1,12 +1,3 @@
-# TODO
-
-- [x] add doc comments
-- [x] add exception handling in NameSortingService
-- [x] add unit tests
-- [x] dockerize project
-- [ ] add ci/cd things
-
----
 # Name Sorter
 
 ### Prerequisites
@@ -42,6 +33,20 @@ Run the container:
 ```bash
 docker run --rm -it namersorter-app unsorted-names-list.txt
 ```
+
+### Running Via Github Actions
+
+For CI pipeline I chose to go with Github Actions as it is already part 
+of my project repository and I just had to add a `.github/workflows/main.yml` 
+ to the project to make it work.
+
+Step to run:
+- Click the `Actions` tab on the repository
+- Click `All workflows` then select the `.NET CI` workflow on 
+the left hand side panel
+- Click the `Run workflow` dropdown, then click the `Run workflow` button
+
+You can select the run from the table to see progress.
 
 ---
 
