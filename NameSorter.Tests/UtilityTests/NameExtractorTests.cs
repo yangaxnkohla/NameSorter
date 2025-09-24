@@ -48,7 +48,7 @@ public class NameExtractorTests
     public void GetValidFullNames_NullList_ShouldThrowArgumentNullException()
     {
         // Act & Assert
-        var result = Assert.Throws<ArgumentNullException>(() => NameExtractor.GetValidFullNames(null));
+        var result = Assert.Throws<ArgumentNullException>(() => NameExtractor.GetValidFullNames(null!));
         
         Assert.Equal("fileLines", result.ParamName);
         Assert.Contains("Value cannot be null", result.Message);

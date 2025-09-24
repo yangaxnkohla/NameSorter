@@ -12,10 +12,10 @@ public class App(INameSortingService nameSortingService, IFileService fileServic
     /// <summary>
     /// Starts up the application to sort names from file and write them to another file.
     /// </summary>
-    public async Task RunAsync()
+    public async Task RunAsync(string? filePath)
     {
         var baseDirectory = Environment.CurrentDirectory;
-        var inputPath = Path.Combine(baseDirectory, FilePathConstants.UnSortedNameFile);
+        var inputPath = !string.IsNullOrEmpty(filePath) ? filePath : Path.Combine(baseDirectory, FilePathConstants.UnSortedNameFile);
         var outputPath = Path.Combine(baseDirectory, FilePathConstants.SortedNameFile);
         
         var nameList = await nameSortingService.SortNamesFromFileAsync(inputPath);

@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		.dockerignore = .dockerignore
 		README.md = README.md
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Tests", "NameSorter.Tests\NameSorter.Tests.csproj", "{754FE177-032B-49CA-AB29-316EDE9BA0EA}"
@@ -15,8 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Abstractions", "NameSorter.Abstractions\NameSorter.Abstractions.csproj", "{EB24D501-42F8-47E1-8261-73EB3E88A76B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Services", "NameSorter.Services\NameSorter.Services.csproj", "{5F4D33C0-93EE-40B4-9AA9-F74EBB9A49EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Data", "NameSorter.Data\NameSorter.Data.csproj", "{E43ABB45-7EA1-4FA1-A76F-C7C601B552C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSorter.Utility", "NameSorter.Utility\NameSorter.Utility.csproj", "{F51C17B5-5036-4721-9299-421F6501C789}"
 EndProject
@@ -42,10 +41,6 @@ Global
 		{5F4D33C0-93EE-40B4-9AA9-F74EBB9A49EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F4D33C0-93EE-40B4-9AA9-F74EBB9A49EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F4D33C0-93EE-40B4-9AA9-F74EBB9A49EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E43ABB45-7EA1-4FA1-A76F-C7C601B552C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E43ABB45-7EA1-4FA1-A76F-C7C601B552C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E43ABB45-7EA1-4FA1-A76F-C7C601B552C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E43ABB45-7EA1-4FA1-A76F-C7C601B552C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F51C17B5-5036-4721-9299-421F6501C789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F51C17B5-5036-4721-9299-421F6501C789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F51C17B5-5036-4721-9299-421F6501C789}.Release|Any CPU.ActiveCfg = Release|Any CPU

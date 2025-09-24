@@ -17,7 +17,7 @@ var host = ServiceCollection.CreateHostBuilder(args)
 using (var scope = host.Services.CreateScope())
 {
     var app = scope.ServiceProvider.GetRequiredService<App>();
-    await app.RunAsync(); 
+    await app.RunAsync(args.Length > 0 ? args[0] : null); 
 }
 
 await host.StopAsync();

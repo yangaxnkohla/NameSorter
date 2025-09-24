@@ -3,4 +3,4 @@
     image: namesorter
     build:
       context: .
-      dockerfile: NameSorter/Dockerfile
+      dockerfile: Dockerfile

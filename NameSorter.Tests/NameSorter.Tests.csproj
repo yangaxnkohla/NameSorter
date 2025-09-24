@@ -21,13 +21,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\NameSorter.Services\NameSorter.Services.csproj" />
+        <ProjectReference Include="..\NameSorter.Services\NameSorter.Services.csproj" />
+        <ProjectReference Include="..\NameSorter.Abstractions\NameSorter.Abstractions.csproj" />
+        <ProjectReference Include="..\NameSorter.Utility\NameSorter.Utility.csproj" />
     </ItemGroup>
     
     <ItemGroup>
