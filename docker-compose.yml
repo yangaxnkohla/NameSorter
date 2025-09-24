@@ -1,0 +1,6 @@
+﻿services:
+  namesorter:
+    image: namesorter
+    build:
+      context: .
+      dockerfile: NameSorter/Dockerfile
