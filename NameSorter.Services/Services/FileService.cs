@@ -12,17 +12,21 @@ public class FileService : IFileService
         try
         {
             var lines = await File.ReadAllLinesAsync(filePath);
-            
+
             if (lines.Length == 0)
             {
                 throw new FileException($"Could not read lines from file path '{filePath}'");
             }
-            
+
             return lines.ToList();
         }
         catch (FileNotFoundException ex)
         {
             throw new FileNotFoundException($"Could not find the file: {ex.Message}", filePath);
+        }
+        catch (FileException)
+        {
+            throw;
         }
         catch (Exception ex)
         {
@@ -35,9 +39,17 @@ public class FileService : IFileService
     {
         try
         {
+            if (lines.Count == 0)
+            {
+                throw new FileException($"Cannot empty lines to file path '{filePath}'");
+            }
             return append ? 
                 File.AppendAllLinesAsync(filePath, lines) : 
                 File.WriteAllLinesAsync(filePath, lines);
+        }
+        catch (FileException)
+        {
+            throw;
         }
         catch (Exception ex)
         {

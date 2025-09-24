@@ -12,8 +12,13 @@ public static class NameExtractor
     /// <param name="fileLines">List of strings read from a file.</param>
     /// <returns>List of <see cref="FullName"/>.</returns>
     /// <exception cref="InvalidNameException">Invalid name exception.</exception>
-    public static List<FullName> GetFullNames(List<string> fileLines)
+    public static List<FullName> GetValidFullNames(List<string> fileLines)
     {
+        if (fileLines == null)
+        {
+            throw new ArgumentNullException(nameof(fileLines));
+        }
+        
         var fullNames = new List<FullName>();
 
         foreach (var line in fileLines)

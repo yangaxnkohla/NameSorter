@@ -11,7 +11,7 @@ public class NameSortingService(IFileService fileService) : INameSortingService
     {
         var fileLines = await fileService.ReadLinesFromFileAsync(inputPath);
 
-        var fullNames = NameExtractor.GetFullNames(fileLines);
+        var fullNames = NameExtractor.GetValidFullNames(fileLines);
         
         var sortedNames = fullNames.OrderBy(x => x.LastName)
             .ThenBy(x => x.GivenName.FirstName)
@@ -22,11 +22,5 @@ public class NameSortingService(IFileService fileService) : INameSortingService
         var sortedNameList = sortedNames.Select(x => x.DisplayFullName).ToList();
         
         return await Task.FromResult(sortedNameList);
-    }
-
-    /// <inheritdoc cref="INameSortingService.WriteNamesToFileAsync"/>
-    public async Task WriteNamesToFileAsync(string outputPath, List<string> nameList)
-    {
-        await fileService.WriteLinesToFileAsync(outputPath, nameList, false);
     }
 }
